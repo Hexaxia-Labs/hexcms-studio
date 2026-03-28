@@ -4,13 +4,16 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { FileTree } from "@/components/FileTree";
 import { FileBrowser } from "@/components/FileBrowser";
-import { Editor } from "@/components/Editor";
 import { Preview } from "@/components/Preview";
 import { GitPanel } from "@/components/GitPanel";
 import { FrontmatterForm } from "@/components/FrontmatterForm";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
-// Dynamic import for VisualEditor to avoid SSR issues with Tiptap
+// Dynamic imports for editors to avoid SSR issues with CodeMirror/Tiptap
+const Editor = dynamic(
+  () => import("@/components/Editor").then((mod) => mod.Editor),
+  { ssr: false, loading: () => <div className="p-4">Loading editor...</div> }
+);
 const VisualEditor = dynamic(
   () => import("@/components/VisualEditor").then((mod) => mod.VisualEditor),
   { ssr: false, loading: () => <div className="p-4">Loading editor...</div> }
