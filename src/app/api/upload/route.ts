@@ -24,9 +24,28 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "No target path provided" }, { status: 400 });
     }
 
+    // Security: validate file size (10MB limit)
+    const MAX_FILE_SIZE = 10 * 1024 * 1024;
+    if (file.size > MAX_FILE_SIZE) {
+      return NextResponse.json({ error: "File too large (max 10MB)" }, { status: 413 });
+    }
+
+    // Security: validate MIME type
+    const allowedMimes = ["image/jpeg", "image/png", "image/gif", "image/webp", "image/svg+xml"];
+    if (!allowedMimes.includes(file.type)) {
+      return NextResponse.json({ error: "Invalid file type" }, { status: 400 });
+    }
+
     // Get the directory of the markdown file
     const contentDir = path.join(activeRepo.path, activeRepo.contentPath);
-    const mdDir = path.dirname(path.join(contentDir, targetPath));
+
+    // Security: ensure targetPath is within content directory
+    const resolvedTarget = path.resolve(path.join(contentDir, targetPath));
+    if (!resolvedTarget.startsWith(path.resolve(contentDir))) {
+      return NextResponse.json({ error: "Invalid path" }, { status: 400 });
+    }
+
+    const mdDir = path.dirname(resolvedTarget);
 
     // Create images subdirectory if it doesn't exist
     const imagesDir = path.join(mdDir, "images");

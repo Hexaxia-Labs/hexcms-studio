@@ -38,9 +38,14 @@ export function Preview({ content, className = "" }: PreviewProps) {
         // Sanitize HTML to prevent XSS
         const sanitizedHtml = DOMPurify.sanitize(data.html, {
           ADD_TAGS: ["iframe"],
-          ADD_ATTR: ["target", "rel"],
+          ADD_ATTR: ["target", "rel", "allowfullscreen", "frameborder"],
         });
-        setHtml(sanitizedHtml);
+        // Strip iframes that aren't from trusted sources
+        const cleaned = sanitizedHtml.replace(
+          /<iframe[^>]*src="(?!https:\/\/(www\.)?(youtube\.com|youtube-nocookie\.com|player\.vimeo\.com)\/)[^"]*"[^>]*><\/iframe>/gi,
+          ""
+        );
+        setHtml(cleaned);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Preview failed");
       } finally {

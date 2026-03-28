@@ -1,7 +1,8 @@
 import fs from "fs/promises";
 import path from "path";
+import os from "os";
 
-const CONFIG_DIR = path.join(process.env.HOME || "~", ".hexcms-studio");
+const CONFIG_DIR = path.join(os.homedir(), ".hexcms-studio");
 const CONFIG_FILE = path.join(CONFIG_DIR, "config.json");
 
 export interface RepoConfig {
