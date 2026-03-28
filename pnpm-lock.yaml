@@ -59,9 +59,6 @@ importers:
       '@types/turndown':
         specifier: ^5.0.6
         version: 5.0.6
-      codemirror:
-        specifier: ^6.0.2
-        version: 6.0.2
       dompurify:
         specifier: ^3.3.3
         version: 3.3.3
@@ -219,9 +216,6 @@ packages:
 
   '@codemirror/lint@6.9.4':
     resolution: {integrity: sha512-ABc9vJ8DEmvOWuH26P3i8FpMWPQkduD9Rvba5iwb6O3hxASgclm3T3krGo8NASXkHCidz6b++LWlzWIUfEPSWw==}
-
-  '@codemirror/search@6.6.0':
-    resolution: {integrity: sha512-koFuNXcDvyyotWcgOnZGmY7LZqEOXZaaxD/j6n18TCLx2/9HieZJ5H6hs1g8FiRxBD0DNfs0nXn17g872RmYdw==}
 
   '@codemirror/state@6.6.0':
     resolution: {integrity: sha512-4nbvra5R5EtiCzr9BTHiTLc+MLXK2QGiAVYMyi8PkQd3SR+6ixar/Q/01Fa21TBIDOZXgeWV4WppsQolSreAPQ==}
@@ -850,9 +844,6 @@ packages:
 
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
-
-  codemirror@6.0.2:
-    resolution: {integrity: sha512-VhydHotNW5w1UGK0Qj96BwSk/Zqbp9WbnyK2W/eVMv4QyF41INRGpjUhFJY7/uDNuudSc33a/PKr4iDqRduvHw==}
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
@@ -1582,12 +1573,6 @@ snapshots:
       '@codemirror/view': 6.40.0
       crelt: 1.0.6
 
-  '@codemirror/search@6.6.0':
-    dependencies:
-      '@codemirror/state': 6.6.0
-      '@codemirror/view': 6.40.0
-      crelt: 1.0.6
-
   '@codemirror/state@6.6.0':
     dependencies:
       '@marijn/find-cluster-break': 1.0.2
@@ -2148,16 +2133,6 @@ snapshots:
   character-entities@2.0.2: {}
 
   client-only@0.0.1: {}
-
-  codemirror@6.0.2:
-    dependencies:
-      '@codemirror/autocomplete': 6.20.0
-      '@codemirror/commands': 6.10.3
-      '@codemirror/language': 6.12.3
-      '@codemirror/lint': 6.9.4
-      '@codemirror/search': 6.6.0
-      '@codemirror/state': 6.6.0
-      '@codemirror/view': 6.40.0
 
   comma-separated-tokens@2.0.3: {}
 

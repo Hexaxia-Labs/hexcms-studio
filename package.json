@@ -31,7 +31,6 @@
     "@tiptap/react": "3.21.0",
     "@tiptap/starter-kit": "3.21.0",
     "@types/turndown": "^5.0.6",
-    "codemirror": "^6.0.2",
     "dompurify": "^3.3.3",
     "gray-matter": "^4.0.3",
     "lowlight": "^3.3.0",
