@@ -158,6 +158,20 @@ body {
   color: var(--foreground) !important;
 }
 
+/* Remove decorative backticks from inline code (added by @tailwindcss/typography) */
+.prose code::before,
+.prose code::after {
+  content: none !important;
+}
+
+/* Style inline code with a visible background instead */
+.prose :not(pre) > code {
+  background: var(--muted);
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
 /* TipTap editor content area text color */
 .ProseMirror {
   color: var(--foreground) !important;
