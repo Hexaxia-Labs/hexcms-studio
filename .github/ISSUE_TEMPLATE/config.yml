@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security Vulnerability
+    url: mailto:security@hexaxia.com
+    about: Report security issues privately via email, not as a public issue.
+  - name: General Questions
+    url: https://github.com/alamb-hex/hexcms-studio/discussions
+    about: Ask questions in GitHub Discussions instead of opening an issue.

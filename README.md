@@ -86,4 +86,4 @@ This makes it ideal for local content management but incompatible with serverles
 
 ## License
 
-MIT
+[MIT](LICENSE) - Copyright (c) 2025-2026 Hexaxia Technologies LLC
