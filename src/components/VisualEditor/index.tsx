@@ -131,6 +131,7 @@ export function VisualEditor({
         heading: {
           levels: [1, 2, 3],
         },
+        link: false,
       }),
       Link.configure({
         openOnClick: false,
