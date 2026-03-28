@@ -1,5 +1,11 @@
 # HexCMS Studio
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.2.0-green.svg)](CHANGELOG.md)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black.svg)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6.svg)](https://www.typescriptlang.org)
+[![GitHub stars](https://img.shields.io/github/stars/alamb-hex/hexcms-studio)](https://github.com/alamb-hex/hexcms-studio/stargazers)
+
 A modern, themeable markdown CMS editor for managing your content repositories locally. Built with Next.js 16, featuring visual WYSIWYG editing, Git integration, and multi-repository support.
 
 > **Note**: HexCMS Studio is designed to run locally on your machine. It requires direct filesystem access to read and write your content files, and cannot be deployed to cloud platforms like Vercel.
