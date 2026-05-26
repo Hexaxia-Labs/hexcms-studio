@@ -9,11 +9,6 @@
     "start": "next start",
     "lint": "biome lint src"
   },
-  "pnpm": {
-    "overrides": {
-      "ajv": "6.14.0"
-    }
-  },
   "overrides": {
     "postcss": "8.5.15"
   },
